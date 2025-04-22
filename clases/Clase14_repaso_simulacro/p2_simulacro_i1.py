@@ -3,7 +3,6 @@ from diccionario import valida
 
 def corregir_2(palabra, pos1, pos2):
     abecedario = "abcdefghijklmnopqrstuvwxyz"
-    palabra_nueva = ""
 
     for letra in abecedario:
         palabra_nueva = palabra[:pos1] + letra + palabra[pos1 + 1:]
