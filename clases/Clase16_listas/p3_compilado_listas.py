@@ -1,16 +1,17 @@
 # Escribe tu código aquí
 
 def contabilizar(lista):
-    lista_depostios = []
-    lista_retiros = []
-
-    for valor in lista:
-        if valor>0:
-            lista_depostios.append(valor)
+    # [100,250,-340,-400,500]
+    dep_total = 0
+    ret_total = 0
+    # for numero in lista:
+    for i_lista in range(len(lista)):
+        numero = lista[i_lista]
+        if numero > 0:
+            dep_total = dep_total + numero
         else:
-            lista_retiros.append(valor)
-    
-    suma_depositos = sum(lista_depostios)
-    suma_retiros = sum(lista_retiros)
+            ret_total = ret_total + numero
 
-    return [suma_depositos, suma_retiros]
+    lista_respuesta = [dep_total, ret_total]
+    return lista_respuesta
+    # return [dep_total, ret_total]
