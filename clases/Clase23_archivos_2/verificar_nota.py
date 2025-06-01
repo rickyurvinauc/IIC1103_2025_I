@@ -1,5 +1,6 @@
-# Escribamos un programa que verifique que las notas finales son las correctas, en el caso de que no sean las correctas actualizarlas
-from leer_notas import leer_notas
+# Escribamos un programa que verifique que las notas finales son las correctas,
+# en el caso de que no sean las correctas actualizarlas
+from leer_notas import leer_notas_forma_1
 from escribir_notas import escribir_notas_actualizadas
 
 def convertir_notas(notas):
@@ -17,6 +18,6 @@ def verificar_nota(notas):
             nota[1] = nota_sobre_7
     escribir_notas_actualizadas('notas.csv', notas)
     
-notas = leer_notas('notas.csv')
+notas = leer_notas_forma_1('notas.csv')
 verificar_nota(notas)
  
